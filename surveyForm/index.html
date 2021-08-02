@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">
+                brCodePro Survey Form
+            </h1>
+            <p id="description" class="text-center">
+                Thank you for taking the time to help us improve the platform
+            </p>
+        </header>
+
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+            </div>
+
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email"
+                    required />
+            </div>
+
+            <div class="form-group">
+                <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+                <input type="number" name="age" id="number" class="form-control" min="10" max="99" placeholder="Age" />
+            </div>
+
+            <div class="form-group">
+                <p>Which browser do you often use?</p>
+                <select id="dropdown" name="browser" class="form-control" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="chrome">Google Chrome</option>
+                    <option value="explorer">Internet Explorer</option>
+                    <option value="safari">Safari</option>
+                    <option value="opera">Opera GX</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>How satisfied are you with your browser?</p>
+                <label>
+                    <input name="satisfaction" value="very" type="radio" class="input-radio" checked>Very satisfied
+                </label>
+
+                <label>
+                    <input name="satisfaction" value="satisfied" type="radio" class="input-radio">Satisfied
+                </label>
+
+                <label>
+                    <input name="satisfaction" value="ok" type="radio" class="input-radio">OK
+                </label>
+
+                <label>
+                    <input name="satisfaction" value="disatisfied" type="radio" class="input-radio">Disatisfied
+                </label>
+
+                <label>
+                    <input name="satisfaction" value="very-disatisfied" type="radio" class="input-radio">Very
+                    disatisfied
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p>How satisfied are you with your internet conection?</p>
+                <label>
+                    <input name="satisfaction2" value="deeply" type="radio" class="input-radio">Very satisfied
+                </label>
+                <label>
+                    <input name="satisfaction2" value="satisfied" type="radio" class="input-radio">Satisfied
+                </label>
+                <label>
+                    <input name="satisfaction2" value="ok" type="radio" class="input-radio">OK
+                </label>
+                <label>
+                    <input name="satisfaction2" value="disatisfied" type="radio" class="input-radio">Disatisfied
+                </label>
+                <input name="satisfaction2" value="very-disatisfied" type="radio" class="input-radio">Very disatisfied
+                </label>
+            </div>
+
+            <div id="form-group">
+                <p>Would you recommend your internet service provider to a friend?</p>
+                <label>
+                    <input name="user-recommend" value="certainly" type="radio" class="input-radio">Certainly
+                </label>
+                <label>
+                    <input name="user-recommend" value="maybe" type="radio" class="input-radio">Maybe
+                </label>
+                <label>
+                    <input name="user-recommend" value="not sure" type="radio" class="input-radio">Not sure
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p class="mt">What is your main search engine on the internet?</p>
+                <select id="search-engine" name="searchEngine" class="form-control" required>
+                    <option disable selected value>Select an option</option>
+                    <option value="bing">Bing Search</option>
+                    <option value="dog">Dogpile Search</option>
+                    <option value="duck">Duck Duck Go Search</option>
+                    <option value="google">Google Search</option>
+                    <option value="scholar">Google Scholar Search</option>
+                    <option value="yahoo">Yahoo Search</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>What's the favorite feature of your prefered search engine? <br>
+                    <span class="clue">(check all that apply)</span>
+                </p>
+                <label>
+                    <input name="most-like" value="favors-fresh-content" type="checkbox" class="input-checkbox" />Favors
+                    fresh content
+                </label>
+
+                <label>
+                    <input name="most-like" value="ranks-blogs-and-services" type="checkbox"
+                        class="input-checkbox" />Ranks blogs and services
+                </label>
+
+                <label>
+                    <input name="most-like" value="acessible-on-my-device" type="checkbox"
+                        class="input-checkbox" />Acessible on my device
+                </label>
+
+                <label>
+                    <input name="most-like" value="doesnt-track-information" type="checkbox"
+                        class="input-checkbox" />Doesn't track information
+                </label>
+
+                <label>
+                    <input name="most-like" value="fast-search" type="checkbox" class="input-checkbox" />Fast search
+                    results
+                </label>
+
+                <label>
+                    <input name="most-like" value="favors-web-pages" type="checkbox" class="input-checkbox" />Favors web
+                    pages instead of blogs
+                </label>
+
+                <label>
+                    <input name="most-like" value="more-ads" type="checkbox" class="input-checkbox" />More ads
+                </label>
+
+                <label>
+                    <input name="most-like" value="less-ads" type="checkbox" class="input-checkbox" />Less ads
+                </label>
+
+                <label>
+                    <input name="most-like" value="blocks-undesirable-websites" type="checkbox"
+                        class="input-checkbox" />Blocks undesirable websites
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p>If you could add a new feature to your browser or search engine, what would it be?</p>
+                <textarea id="comments" class="input-textarea" name="comment"
+                    placeholder="Enter your comment here..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
