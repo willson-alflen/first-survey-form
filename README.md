@@ -1,2 +1,2 @@
 # first-survey-form
- Survey Form created by using a "freeCodeCamp" template.
+ Survey Form created using a "freeCodeCamp" template.
